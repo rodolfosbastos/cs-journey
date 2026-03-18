@@ -27,7 +27,7 @@ any cybersecurity professional.
 | 11→12 | ✅ | ROT13 cipher and the `tr` command |
 | 12→13 | ✅ | Hexdumps, file signatures, and decompression chaining |
 | 13→14 | ✅ | SSH authentication with a private key |
-| 14→15 | 🔄 | In progress — sending data over a port |
+| 14→15 | ✅ | Sending data to a port with `telnet` |
 | 15→25 | ⏳ | Pending |
 
 ---
@@ -207,9 +207,14 @@ ssh -i sshkey.private bandit14@<host> -p <port>      # authenticate with the key
 ---
 
 ### Level 14→15 — Sending Data Over a Port
-*(In progress)*
+A service is running on the local machine listening on port 30000. To get the next password, you connect to that port and send the current level's password as plain text — the service validates it and responds with the next one.
 
-Involves connecting to a local port and submitting data to receive a response. Likely introduction to `nc` (netcat) or direct socket communication.
+```bash
+telnet localhost 30000   # connect to the local service
+# then type the password and hit enter
+```
+
+**Key idea:** Telnet establishes a raw text connection between two endpoints — an IP and a port. The process is identical whether the host is localhost or a remote machine. This makes telnet useful for testing and debugging services: you can talk directly to anything that communicates in plain text, seeing exactly what the protocol looks like without a client hiding it from you.
 
 ---
 
@@ -239,6 +244,9 @@ sort file | uniq -u                   # find unique (non-duplicate) lines
 base64 -d file                        # decode Base64
 cat file | tr 'A-Za-z' 'N-ZA-Mn-za-m'  # ROT13
 xxd -r hexdump > binary               # reverse hexdump to binary
+
+# Network communication
+telnet <host> <port>                  # open raw text connection to a host:port
 
 # Decompression
 gzip -d file.gz
