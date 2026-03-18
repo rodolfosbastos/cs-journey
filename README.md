@@ -26,9 +26,22 @@ notes/                       # Standalone concept notes (future)
 
 ---
 
+## Daily Schedule
+
+3 hours every morning, 7:30–10:30 AM (America/Araguaina):
+
+| Time | Focus |
+|------|-------|
+| 7:30 – 8:30 | OverTheWire Bandit |
+| 8:30 – 9:30 | Google Cybersecurity Certificate |
+| 9:30 – 10:30 | Intro to Computer Programming (UoL) |
+
+---
+
 ## Goals
 
 - Build a solid foundation in Linux, networking, and security fundamentals
 - Complete Google Cybersecurity Certificate
+- Complete Intro to Computer Programming — University of London
 - Progress through OverTheWire wargames (Bandit → Natas → Leviathan)
 - Develop practical skills through CTF challenges
