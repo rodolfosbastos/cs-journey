@@ -1,6 +1,6 @@
-# Cybersecurity Journey
+# CS Journey
 
-A structured record of my learning path into cybersecurity — covering hands-on labs, certifications, and key concepts.
+A structured record of my self-taught path into Computer Science — covering hands-on labs, certifications, and key concepts. Cybersecurity is a likely direction but the focus for now is building a solid CS foundation.
 
 ---
 
@@ -11,6 +11,7 @@ labs/                        # Hands-on wargames and practice
   overthewire-bandit/        # OverTheWire Bandit wargame
 certifications/              # Cert coursework and notes
   google-cybersecurity/      # Google Cybersecurity Certificate
+  university-of-london-intro-programming/  # Intro to Programming (UoL)
 notes/                       # Standalone concept notes (future)
 ```
 
@@ -40,8 +41,9 @@ notes/                       # Standalone concept notes (future)
 
 ## Goals
 
-- Build a solid foundation in Linux, networking, and security fundamentals
+- Build a solid foundation in Linux, networking, and programming fundamentals
 - Complete Google Cybersecurity Certificate
 - Complete Intro to Computer Programming — University of London
 - Progress through OverTheWire wargames (Bandit → Natas → Leviathan)
 - Develop practical skills through CTF challenges
+- Determine a CS specialization path based on what resonates most

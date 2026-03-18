@@ -4,12 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Project Is
 
-A structured cybersecurity learning portfolio tracking progress across three concurrent programs:
+A structured CS learning portfolio — broad foundation first, specialization later. Currently tracking progress across three concurrent programs:
 - **OverTheWire Bandit** — CTF wargame, documenting concepts learned per level (not solutions or passwords)
 - **Google Cybersecurity Certificate** — 8-course Coursera program
 - **University of London Intro to Programming** — Coursera module-based course
 
-Remote: `git@github.com:rodolfosbastos/cybersecurity-journey.git`
+Remote: `git@github.com:rodolfosbastos/cs-journey.git`
 
 ## Structure
 
