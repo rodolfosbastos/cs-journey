@@ -4,9 +4,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Project Is
 
-A structured CS learning portfolio — broad foundation first, specialization later. Currently tracking progress across three concurrent programs:
+A structured CS learning portfolio — broad foundation first, specialization later. Currently tracking progress across four concurrent programs:
 - **OverTheWire Bandit** — CTF wargame, documenting concepts learned per level (not solutions or passwords)
 - **Google Cybersecurity Certificate** — 8-course Coursera program
+- **Google IT Support Certificate** — Coursera program, Course 1 complete, Course 2 in progress
 - **University of London Intro to Programming** — Coursera module-based course
 
 Remote: `git@github.com:rodolfosbastos/cs-journey.git`
@@ -17,6 +18,7 @@ Remote: `git@github.com:rodolfosbastos/cs-journey.git`
 labs/overthewire-bandit/   # Level-by-level concept notes for Bandit wargame
 labs/home-lab/             # Placeholder for future hands-on lab work
 certifications/google-cybersecurity/         # 8-course cert notes
+certifications/google-it-support/            # IT Support cert (Course 1 certificate stored here)
 certifications/university-of-london-intro-programming/  # Programming course notes
 ```
 
@@ -32,6 +34,7 @@ certifications/university-of-london-intro-programming/  # Programming course not
 
 | Program | Status |
 |---------|--------|
-| Bandit | Level 15 in progress |
+| Bandit | Level 17 in progress |
 | Google Cybersecurity Certificate | Course 1 in progress |
+| Google IT Support Certificate | Course 1 complete ✅ — Course 2 in progress |
 | Intro to Programming | Module 1 in progress |

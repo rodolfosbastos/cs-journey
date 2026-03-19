@@ -28,7 +28,9 @@ any cybersecurity professional.
 | 12→13 | ✅ | Hexdumps, file signatures, and decompression chaining |
 | 13→14 | ✅ | SSH authentication with a private key |
 | 14→15 | ✅ | Sending data to a port with `telnet` |
-| 15→25 | ⏳ | Pending |
+| 15→16 | ✅ | SSL/TLS encrypted connections with `openssl s_client` |
+| 16→17 | ✅ | Port scanning with `nmap`, SSL service discovery, RSA private key retrieval |
+| 17→25 | ⏳ | Pending |
 
 ---
 
@@ -206,6 +208,31 @@ ssh -i sshkey.private bandit14@<host> -p <port>      # authenticate with the key
 
 ---
 
+### Level 15→16 — SSL/TLS Encrypted Connections
+Like level 14→15, but the service requires an encrypted connection. `openssl s_client` acts as a general-purpose SSL/TLS client — like telnet but for encrypted services.
+
+```bash
+openssl s_client -connect <host>:<port> -quiet   # connect with SSL, suppress TLS noise
+```
+
+**Key idea:** `-quiet` suppresses TLS session noise and disables interactive command mode (which interprets keystrokes like `k`/`K` as TLS commands rather than data). Without it, characters in your input can trigger unintended TLS handshake actions like KEYUPDATE. Always use `-quiet` when piping data to an SSL service non-interactively.
+
+---
+
+### Level 16→17 — Port Scanning and SSL Service Discovery
+The correct port is unknown — one of several in a range speaks SSL and returns a private key. `nmap` scans the range to identify open ports and their services.
+
+```bash
+nmap -sV -p <start>-<end> localhost    # scan port range, detect service versions
+openssl s_client -connect localhost:<port> -quiet  # connect and submit password
+```
+
+The server returns an **RSA private key** instead of a plain-text password — it must be saved and used with SSH `-i` to log in as the next user (same as level 13→14).
+
+**Key idea:** `nmap -sV` probes each open port and fingerprints what service is running (e.g. `ssl/unknown` vs `ssl/echo`). Service version scanning is a core recon technique. An "echo" service just mirrors your input back — immediately ruled out as a candidate.
+
+---
+
 ### Level 14→15 — Sending Data Over a Port
 A service is running on the local machine listening on port 30000. To get the next password, you connect to that port and send the current level's password as plain text — the service validates it and responds with the next one.
 
@@ -247,6 +274,8 @@ xxd -r hexdump > binary               # reverse hexdump to binary
 
 # Network communication
 telnet <host> <port>                  # open raw text connection to a host:port
+openssl s_client -connect <host>:<port> -quiet  # SSL/TLS encrypted connection
+nmap -sV -p <start>-<end> <host>     # scan port range and detect service versions
 
 # Decompression
 gzip -d file.gz
