@@ -17,7 +17,8 @@ Introductory programming course covering core concepts in computer science and s
 
 | Module | Status | Notes |
 |--------|--------|-------|
-| Module 1 | 🔄 In progress | |
+| Module 1 | 🔄 In progress | Content complete — Sleuth assessment pending (requires modules 2 & 3) |
+| Module 2 | 🔄 In progress | |
 
 ---
 

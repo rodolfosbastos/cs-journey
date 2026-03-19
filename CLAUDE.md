@@ -37,4 +37,4 @@ certifications/university-of-london-intro-programming/  # Programming course not
 | Bandit | Level 17 in progress |
 | Google Cybersecurity Certificate | Course 1 in progress |
 | Google IT Support Certificate | Course 1 complete ✅ — Course 2 in progress |
-| Intro to Programming | Module 1 in progress |
+| Intro to Programming | Module 1 content complete (Sleuth assessment pending modules 2 & 3) — Module 2 in progress |
