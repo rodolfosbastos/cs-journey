@@ -4,11 +4,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What This Project Is
 
-A structured CS learning portfolio — broad foundation first, specialization later. Currently tracking progress across four concurrent programs:
-- **OverTheWire Bandit** — CTF wargame, documenting concepts learned per level (not solutions or passwords)
-- **Google Cybersecurity Certificate** — 8-course Coursera program
-- **Google IT Support Certificate** — Coursera program, Course 1 complete, Course 2 in progress
-- **University of London Intro to Programming** — Coursera module-based course
+A structured CS learning portfolio now anchored to the **University of London BSc Computer Science** degree (enrolled, starting April 2026). Also tracking certifications and wargames as supplementary work.
+
+- **University of London BSc CS** — degree program, Session 1 starts April 2026 (CM1005, CM1015, CM1040)
+- **Google IT Support Certificate** — Coursera, 5 courses, main priority until October 2026 (RLP claim)
+- **Google Cybersecurity Certificate** — 8-course Coursera program, paused after Course 1 (resuming after IT Support)
+- **OverTheWire Bandit** — CTF wargame, documenting concepts learned per level (not solutions or passwords), on hold
 
 Remote: `git@github.com:rodolfosbastos/cs-journey.git`
 
@@ -19,7 +20,7 @@ labs/overthewire-bandit/   # Level-by-level concept notes for Bandit wargame
 labs/home-lab/             # Placeholder for future hands-on lab work
 certifications/google-cybersecurity/         # 8-course cert notes
 certifications/google-it-support/            # IT Support cert (Course 1 certificate stored here)
-certifications/university-of-london-intro-programming/  # Programming course notes
+certifications/university-of-london-bsc-cs/  # UoL BSc CS degree notes and module tracking
 ```
 
 ## Documentation Conventions
@@ -34,7 +35,7 @@ certifications/university-of-london-intro-programming/  # Programming course not
 
 | Program | Status |
 |---------|--------|
-| Bandit | Level 17 in progress |
-| Google Cybersecurity Certificate | Course 1 in progress |
-| Google IT Support Certificate | Course 1 complete ✅ — Course 2 in progress |
-| Intro to Programming | Module 1 content complete (Sleuth assessment pending modules 2 & 3) — Module 2 in progress |
+| Google IT Support Certificate | Course 1 ✅ — Course 2 in progress (Module 2, routing) — **main priority** |
+| Google Cybersecurity Certificate | Course 1 Module 4 in progress — finishing then pausing |
+| UoL BSc CS | Enrolled — Session 1 starts April 2026 |
+| Bandit | Level 17 — on hold |
