@@ -30,7 +30,9 @@ any cybersecurity professional.
 | 14→15 | ✅ | Sending data to a port with `telnet` |
 | 15→16 | ✅ | SSL/TLS encrypted connections with `openssl s_client` |
 | 16→17 | ✅ | Port scanning with `nmap`, SSL service discovery, RSA private key retrieval |
-| 17→25 | ⏳ | Pending |
+| 17→18 | ✅ | Comparing files with `diff`, piping output through `grep` |
+| 18→19 | ✅ | Running a remote command via SSH without an interactive shell |
+| 19→25 | ⏳ | Pending |
 
 ---
 
@@ -208,6 +210,18 @@ ssh -i sshkey.private bandit14@<host> -p <port>      # authenticate with the key
 
 ---
 
+### Level 14→15 — Sending Data Over a Port
+A service is running on the local machine listening on port 30000. To get the next password, you connect to that port and send the current level's password as plain text — the service validates it and responds with the next one.
+
+```bash
+telnet localhost 30000   # connect to the local service
+# then type the password and hit enter
+```
+
+**Key idea:** Telnet establishes a raw text connection between two endpoints — an IP and a port. The process is identical whether the host is localhost or a remote machine. This makes telnet useful for testing and debugging services: you can talk directly to anything that communicates in plain text, seeing exactly what the protocol looks like without a client hiding it from you.
+
+---
+
 ### Level 15→16 — SSL/TLS Encrypted Connections
 Like level 14→15, but the service requires an encrypted connection. `openssl s_client` acts as a general-purpose SSL/TLS client — like telnet but for encrypted services.
 
@@ -233,15 +247,25 @@ The server returns an **RSA private key** instead of a plain-text password — i
 
 ---
 
-### Level 14→15 — Sending Data Over a Port
-A service is running on the local machine listening on port 30000. To get the next password, you connect to that port and send the current level's password as plain text — the service validates it and responds with the next one.
+### Level 17→18 — Comparing Files with diff
+Two files exist: `passwords.old` and `passwords.new`. The password is the one line that changed. `diff` shows the differences between two files side by side with `-y`, and `grep` filters for the changed line marker.
 
 ```bash
-telnet localhost 30000   # connect to the local service
-# then type the password and hit enter
+diff -y passwords.old passwords.new | grep "|"
 ```
 
-**Key idea:** Telnet establishes a raw text connection between two endpoints — an IP and a port. The process is identical whether the host is localhost or a remote machine. This makes telnet useful for testing and debugging services: you can talk directly to anything that communicates in plain text, seeing exactly what the protocol looks like without a client hiding it from you.
+**Key idea:** `diff` is built for comparing file versions. The `|` symbol in side-by-side mode marks lines that differ between the two files. Piping into `grep` lets you isolate exactly what changed — a useful pattern for spotting modifications in config files or logs.
+
+---
+
+### Level 18→19 — SSH Remote Command Execution
+The `.bashrc` on the remote server has been modified to log you out immediately upon login. But SSH can run a single command on the remote host without ever spawning an interactive shell — bypassing `.bashrc` entirely.
+
+```bash
+ssh bandit18@<host> -p <port> cat readme
+```
+
+**Key idea:** SSH's syntax allows a command after the host — `ssh user@host command`. The command runs directly, `.bashrc` never executes, and the output is returned locally. This is widely used in automation, scripts, and situations where an interactive shell isn't needed or available.
 
 ---
 
@@ -276,6 +300,12 @@ xxd -r hexdump > binary               # reverse hexdump to binary
 telnet <host> <port>                  # open raw text connection to a host:port
 openssl s_client -connect <host>:<port> -quiet  # SSL/TLS encrypted connection
 nmap -sV -p <start>-<end> <host>     # scan port range and detect service versions
+ssh <user>@<host> -p <port> <command>  # run a single command remotely without a shell
+
+# File comparison
+diff file1 file2                      # show differences between two files
+diff -y file1 file2                   # side-by-side comparison
+diff -y file1 file2 | grep "|"       # filter only changed lines
 
 # Decompression
 gzip -d file.gz
@@ -285,4 +315,4 @@ tar -xf file.tar
 
 ---
 
-*Last updated: March 2026*
+*Last updated: March 2026 — levels 17→18 and 18→19 added*
