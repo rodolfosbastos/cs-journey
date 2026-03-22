@@ -24,9 +24,9 @@ notes/                       # Standalone concept notes (future)
 
 | Module | Code | Status |
 |--------|------|--------|
-| Introduction to Programming I | CM1005 | ⏳ Starts April 2026 |
-| Computational Mathematics | CM1015 | ⏳ Starts April 2026 |
-| Web Development | CM1040 | ⏳ Starts April 2026 |
+| Introduction to Programming I | CM1005 | ⏳ Starts April 20, 2026 |
+| Computational Mathematics | CM1015 | ⏳ Starts April 20, 2026 |
+| Web Development | CM1040 | ⏳ Starts April 20, 2026 |
 
 ---
 
@@ -34,21 +34,20 @@ notes/                       # Standalone concept notes (future)
 
 | Area | Status |
 |------|--------|
-| Google IT Support Certificate | Course 2 in progress — **main priority** |
-| Google Cybersecurity Certificate | Course 1 Module 4 in progress — finishing then pausing |
-| OverTheWire Bandit | Level 17 — on hold |
-| UoL BSc CS | Starts April 2026 |
+| Google IT Support Certificate | Course 2 Module 2 ✅ — Module 3 in progress — **main priority** |
+| Google Cybersecurity Certificate | Course 1 Module 4 pending — deprioritised |
+| OverTheWire Bandit | Level 19 — on hold |
+| UoL BSc CS | Starts April 20, 2026 |
 
 ---
 
 ## Current Plan
 
-**Phase 1 — now until ~April 2026:**
-- Finish Google Cybersecurity Certificate Course 1 (Module 4) → have one complete course
-- Pause cybersecurity cert
-- Rush Google IT Support Certificate (5 courses total, Course 1 ✅)
+**Phase 1 — now until April 20, 2026:**
+- Focus exclusively on Google IT Support Certificate (Course 2 Module 3+ in progress)
+- Google Cybersecurity Certificate Course 1 Module 4 deprioritised for now
 
-**Phase 2 — April 2026:**
+**Phase 2 — April 20, 2026:**
 - Begin UoL BSc CS Session 1: CM1005, CM1015, CM1040
 - Continue Google IT Support alongside degree work
 

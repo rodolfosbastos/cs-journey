@@ -35,7 +35,7 @@ certifications/university-of-london-bsc-cs/  # UoL BSc CS degree notes and modul
 
 | Program | Status |
 |---------|--------|
-| Google IT Support Certificate | Course 1 ✅ — Course 2 in progress (Module 2, routing) — **main priority** |
-| Google Cybersecurity Certificate | Course 1 Module 4 in progress — finishing then pausing |
-| UoL BSc CS | Enrolled — Session 1 starts April 2026 |
-| Bandit | Level 17 — on hold |
+| Google IT Support Certificate | Course 1 ✅ — Course 2 Module 2 ✅ — Module 3 in progress — **main priority** |
+| Google Cybersecurity Certificate | Course 1 Module 4 pending — deprioritised, resuming after IT Support cert |
+| UoL BSc CS | Enrolled — Session 1 starts **April 20, 2026** |
+| Bandit | Level 19 — on hold |

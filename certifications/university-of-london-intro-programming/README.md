@@ -3,7 +3,7 @@
 **Institution:** University of London
 **Platform:** Coursera
 **Started:** March 2026
-**Status:** In progress
+**Status:** On hold — deprioritised in favour of Google IT Support Certificate
 
 ---
 

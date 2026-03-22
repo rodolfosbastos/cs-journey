@@ -4,9 +4,8 @@
 
 | Certification | Platform | Started | Notes |
 |---------------|----------|---------|-------|
-| Google Cybersecurity Certificate | Coursera | March 2026 | [Details](./google-cybersecurity/README.md) |
-| Google IT Support Certificate | Coursera | March 2026 | Course 2 in progress |
-| Introduction to Computer Programming | Coursera / University of London | March 2026 | [Details](./university-of-london-intro-programming/README.md) |
+| Google IT Support Certificate | Coursera | March 2026 | Course 2 Module 3 in progress — [Details](./google-it-support/README.md) |
+| Google Cybersecurity Certificate | Coursera | March 2026 | Course 1 Module 4 pending — deprioritised — [Details](./google-cybersecurity/README.md) |
 
 ## Completed
 
