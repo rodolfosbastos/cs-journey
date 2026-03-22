@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A structured CS learning portfolio now anchored to the **University of London BSc Computer Science** degree (enrolled, starting April 2026). Also tracking certifications and wargames as supplementary work.
 
-- **University of London BSc CS** — degree program, Session 1 starts April 2026 (CM1005, CM1015, CM1040)
+- **University of London BSc CS** — degree program, Session 1 starts April 20, 2026 (CM1005, CM1015, CM1040)
 - **Google IT Support Certificate** — Coursera, 5 courses, main priority until October 2026 (RLP claim)
 - **Google Cybersecurity Certificate** — 8-course Coursera program, paused after Course 1 (resuming after IT Support)
 - **OverTheWire Bandit** — CTF wargame, documenting concepts learned per level (not solutions or passwords), on hold
